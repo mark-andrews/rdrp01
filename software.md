@@ -108,6 +108,17 @@ Mac users usually don't have to do anything. Just go to your terminal and type `
 Docker is "containerization" software. We can think containers as software stacks or computing environments running in virtual operating systems. 
 Strictly speaking, containers are not virtual operating systems, but in practice we can view them as such.
 To install Docker on Windows or Macs go to https://www.docker.com/products/docker-desktop and install the *stable* version.
+
 We use Docker by issuing commands like `docker pull ...`, `docker run ...`.
 On Macs, these are run from the terminal.
 On Windows, these commands can be run from the DOS command line or from the Powershell terminal, both of which will be installed by default.
+You can test if everything is working by typing the following command
+```
+docker --version
+```
+which should just show you the version of docker, and thereby confirm that it installed.
+The command
+```
+docker run hello-world
+```
+will run a small container and show some output. If that worked, then docker's working.
