@@ -61,7 +61,7 @@ It represents the modern way to use R, and in my opinion, it\'s the best
 way to use R. All the [tidyverse](https://www.tidyverse.org/) packages
 can be installed by typing the following command in R:
 
-``` {.R}
+```r
 install.packages("tidyverse")
 ```
 
@@ -72,7 +72,7 @@ The main packages that are contained within the
 ## Installing Miscellaneous R packages
 
 Many of the packages that we will need will be installed by installing the `tidyverse`, but there are some other R packages that we will use: 
-``` {.R}
+```r
 install.packages("devtools")
 install.packages("drake")
 ```
@@ -80,18 +80,18 @@ install.packages("drake")
 ## Installing LaTeX using `tinytex`
 
 Unless you already use LaTeX and have it installed already, the easiest thing to do is to install `tinytex` as follows.
-``` {.R}
+```r
 install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 This installation will take some time. After it completes, you should restart RStudio.
 After you restart, type the following command (note the three `:`'s):
-```{.R}
+```r
 tinytex:::is_tinytex()
 ```
 
 Test that rmarkdown (which will have be installed by `tidyvese`) will render pdf documents using LaTeX with the following code.
-```{.R}
+```r
 writeLines("Hello $x^2$", 'test.Rmd')
 rmarkdown::render("test.Rmd", output_format = "pdf_document")
 ```
