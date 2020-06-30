@@ -1,0 +1,130 @@
+---
+title: "My first analysis: A report"
+author: Mark Andrews
+date: "Monday, June 27, 2020"
+output:
+  pdf_document:
+    keep_tex: true
+    toc: true
+header-includes:
+  - \usepackage{booktabs}
+bibliography: refs.bib
+biblio-style: apalike
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo=FALSE)
+```
+
+```{r libraries, echo=F}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(pander)
+set.seed(101010)
+```
+
+# Introduction
+
+This **is my introduction**.
+
+## Hypothesis
+
+This *is my hypothesis*.
+
+### Main hypothesis
+
+The \underline{main hypothesis} is ...
+
+```{r my_figure, fig.cap='My scatterplot. It is nice.', out.width="0.67\\textwidth", fig.align='center'}
+data_df <- tibble(x = rnorm(10),
+                  y = rnorm(10))
+ggplot(data_df,
+       aes(x = x, y = y)) + geom_point() + theme_classic()
+```
+
+
+```{r}
+# data_summary <- data_df %>%
+#   summarise_all(list(mean = mean, sd = sd)) %>%
+#   rename_all(~str_replace_all(., '_', ''))
+
+data_summary <- select(diamonds, color, clarity, depth, price) %>% slice(1:10)
+
+make_table <- function(data){
+  kable(data,
+        format = "latex",
+        digits = 2,
+        booktabs = TRUE) %>% 
+    kable_styling(position = 'center')
+}
+
+make_table(data_summary)
+```
+
+
+```{r, comment='>', fig.cap='foo'}
+M <- lm(y ~ x, data = data_df)
+S <- summary(M)
+
+make_table(S$coefficients)
+```
+
+From this analysis, $R^2 = `r round(S$r.squared, 2)`$.
+
+Here is a [link](http://www.nytimes.com).
+
+As was shown by @kantz:2004nonlinear that nonlinear analysis is hard.
+It is known that nonlinear time series is hard [@kantz:2004nonlinear;@das1994time].
+See also @stone:aic, page 45.
+
+
+```{r, eval=FALSE, echo=TRUE}
+M <- brm(y ~ x, data = data_df)
+```
+
+# A list of things
+
+* Blue
+* Red
+* Green
+
+## More colours
+
+1. Blue
+    1. Light blue
+    1. Navy blue
+    1. Baby blue
+1. Green 
+    * Forest green 
+    * Dark green
+
+# Numbered list
+
+5. Blue
+8. Red
+3. Green
+89. Purple
+17. Orange
+
+# The statistical model
+
+Our model is 
+$$
+y_i \leq \alpha + \beta x_i + \epsilon_i
+$$
+
+We use \LaTeX.
+
+# A definition list 
+
+height
+: The person's height in cm
+
+weight
+: The person's weight in kg
+
+age
+: The person's age in years
+
+# Bibliography
