@@ -17,8 +17,9 @@ These are password protected, and you will have been given this password in the 
 
 * [Session 1: 10am to 12pm](https://vimeo.com/434324573)
 * [Session 2: 1pm to 3pm](https://vimeo.com/434380758)
-* Session 3: 4pm to 6pm
-
+* [Session 3: 4pm to 6pm (Part I)](https://vimeo.com/434439869) (There was an few minutes interruption to the 4pm-6pm video. Part I is from 4pm to around 5:10pm)
+* [Session 3: 4pm to 6pm (Part II)](https://vimeo.com/434449611) (Part II is from around 5:15 to 6pm)
+ 
 # Day 4
 
 * Session 1: 10am to 12pm
