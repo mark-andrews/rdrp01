@@ -114,6 +114,14 @@ A good choice is the cross-platform [atom editor](https://atom.io):
 git config --global core.editor "atom --wait"
 ```
 (If you are working on a Mac, and encounter trouble, see [this discussion thread](https://discuss.atom.io/t/not-able-to-associate-atom-with-git-error-macos/15786).)
+
+Some other useful Git configurations are the following:
+```bash
+git config --global merge.conflictstyle diff3
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+
 ## Installing Docker
 
 Docker is "containerization" software. We can think containers as software stacks or computing environments running in virtual operating systems. 
