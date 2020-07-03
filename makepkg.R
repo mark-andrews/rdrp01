@@ -18,11 +18,14 @@ use_news_md()
 # This will modify DESCRIPTION
 use_package("dplyr")
 use_package("ggplot2")
+use_package("lme4")
+use_package("brms")
 use_pipe()
 use_tibble()
 
 # Make your blank R code file
-use_r("demo_utils.R")
+use_r("blmm.R")
+
 # Now, open that file and write your functions and the roxygen2
 
 # "Document" from "Build" menu (Ctrl + Shift + D)
