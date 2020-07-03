@@ -25,8 +25,8 @@ use_tibble()
 use_r("demo_utils.R")
 # Now, open that file and write your functions and the roxygen2
 
-# load all
-# document
+# "Document" from "Build" menu (Ctrl + Shift + D)
+# "Load All" from "Build" menu (Ctrl + Shift + L)
 
 # Add your raw data dir and your script to make the tidy data
 # this will add the use_data
@@ -35,9 +35,15 @@ use_data_raw()
 # Add your vignette
 
 use_vignette(name = "demonstration", title = "A demo of the demopkg.")
+
+# Make package a git repo
 use_git()
-library(usethis)
-library(pkgdown)
+
+# Config the site to use pkgdown
 use_pkgdown()
+
+# load pkgdown
 library(pkgdown)
+
+# build the pkgdown site
 build_site()
