@@ -32,4 +32,8 @@ These are password protected, and you will have been given this password in the 
 * [Session 2: 1pm to 3pm](https://vimeo.com/435095129)
 * [Session 3: 4pm to 6pm](https://vimeo.com/435146107)
 
+# Extra
+
+A made an [extra video](https://vimeo.com/435354940) that deals with the material that we were supposed to cover on Friday but didn't manage to cover because we ran out of time.
+This video uses [this Git repository](https://github.com/mark-andrews/repdemoproj).
 
