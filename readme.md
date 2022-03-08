@@ -1,7 +1,7 @@
-# Reproducible Data Science using RMarkdown, Git, R packages, Docker, Make & Drake, and other tools
+# Reproducible Data Science using RMarkdown, Git, R packages, Docker, Make, and other tools
 
 This course provides a comprehensive introduction to doing reproducible data analysis, which we define as analysis where the entire workflow or pipeline is as open and transparent as possible, making it possible for others, including our future selves, to be able to exactly reproduce any of its results.
-We cover this topic by providing a thorough introduction to a set of R based and general computing tools such as RMarkdown, Git & GitHub, R packages, Docker, Gnu Make and Drake, and show how they can be used together to do reproducible data analysis that can then be shared with others.
+We cover this topic by providing a thorough introduction to a set of R based and general computing tools such as RMarkdown, Git & GitHub, R packages, Docker, Gnu Make, and show how they can be used together to do reproducible data analysis that can then be shared with others.
 After a general introduction on Day 1, where we introduce the core concept of a *research compendium*, we will begin by covering RMarkdown, knitr and related tools.
 These are vital tools for reproducible research that allow us to produce data analysis reports, i.e. articles, slides, posters, websites, etc., by embedding analysis code (R, Python, etc) within the text of the report that is then executed, and the results it produces are inserted into the final output document.
 On Day 2, we provide a comprehensive introduction to version control using Git, including using GitHub.
@@ -9,8 +9,7 @@ Git and GitHub are vital tools for the organization, maintenance, and distributi
 On Day 3, we cover how to create, maintain, distribute R packages.
 R packages are obviously the principal means of distributing reusable R code generally, and here, we will also look at how R packages can be used also to create, maintain, and distribute research compendia.
 On Day 4, we cover Docker, which is a now very popular means for producing reproducible computing environments across different devices, platforms, and operating systems.
-On Day 5, we cover build automation tools, particularly Gnu Make and Drake, which are used for automatically running complex analysis code that involves multiple inter-dependencies between files.
-Gnu Make is a general purpose build automation tool, while Drake is specifically designed for complex data analysis pipelines in R.
+On Day 5, we cover build automation tools, particularly Gnu Make, which are used for automatically running complex analysis code that involves multiple inter-dependencies between files.
 On each day, therefore, we aim to provide a comprehensive and thorough introduction to a set of valuable and generally useful computing tools, each of which plays a key role in allowing us to do reproducible data science.
 
 ## Intended Audience
@@ -46,7 +45,7 @@ Though we assume all participants will be experienced with some methods of stati
 
 We will only assume a minimal familiarity with R and RStudio.
 More extensive R experience is desirable but not essential.
-No experience whatsoever with RMarkdown, Git, R package development, Docker, Make or Drake will be assumed.
+No experience whatsoever with RMarkdown, Git, R package development, Docker, Make will be assumed.
 
 ## Equipment and software requirements
 
@@ -106,14 +105,13 @@ As part of this coverage, we will also cover the packrat and checkpoint R packag
 
 ## Friday, September 3
 
-* Topic 6: *Build automation with Make and Drake*: Executing simple analyses may be as simple as running a short R script or RMarkdown file.
+* Topic 6: *Build automation with Make*: Executing simple analyses may be as simple as running a short R script or RMarkdown file.
 On the other hand, complex analyses may involve dozens of scripts, each pertaining to a particular part of the analysis pipeline, and there may be complex inter-dependencies between files, and the entire pipeline make take hours or even days to complete.
-Tools such as Gnu Make and Drake allow us to run our entire analysis pipeline using single shell or R commands.
+Tools such as Gnu Make allow us to run our entire analysis pipeline using single shell or R commands.
 More importantly, these tools identify the inter-dependencies in the code base and so allow us to run only those parts of the pipelines that are affected after any change is made.
 Gnu Make a generally useful tool for any software development, and can be used for many analysis related tasks, especially those that involve code in multiple different languages.
-Drake, on the other hand, was specifically designed for R based workflows, particularly those that involve high performance and distributed computing.
-In this final section of the course, therefore, we will explore how to use Make and Drake to automate analysis workflows.
+In this final section of the course, therefore, we will explore how to use Make to automate analysis workflows.
 To do so, we will use some relatively simple but otherwise typical data analysis projects, involving data cleaning, modelling fitting, followed by report generation.
-Here, we will also deal with parallel and distributed computing workflows and how these may be automated by Make and Drake.
+Here, we will also deal with parallel and distributed computing workflows and how these may be automated by Make.
 
 
